@@ -1,0 +1,35 @@
+{
+  "name": "phaser-gulp-requirejs",
+  "version": "0.0.0",
+  "description": "Phaser template with requirejs and gulp",
+  "repository": "eguneys/phaser-gulp-requirejs",
+  "main": "public/lib/common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "requirejs",
+    "phaser"
+  ],
+  "author": "heroku <eguneys@hotmail.com> (http://eguneys.github.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.3.9",
+    "bower-requirejs": "^1.1.0",
+    "gulp": "^3.8.7",
+    "gulp-changed": "^1.0.0",
+    "gulp-imagemin": "^1.0.1",
+    "gulp-jshint": "^1.8.4",
+    "gulp-livereload": "^2.1.1",
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-util": "^3.0.1",
+    "gulp-webserver": "^0.7.2",
+    "jshint-stylish": "^0.4.0",
+    "merge-stream": "^0.1.5",
+    "mv": "^2.0.3",
+    "requirejs": "^2.1.14",
+    "rimraf": "^2.2.8",
+    "run-sequence": "^0.3.6"
+  }
+}

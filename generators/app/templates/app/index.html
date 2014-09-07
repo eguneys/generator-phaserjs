@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Phaser Template | Phaser Gulp RequireJS</title>
+    <style>
+     .container {
+       width: 100%;
+       text-align: center;
+     }
+     .row {
+       margin: 40px;
+     }
+
+     .row h1 {
+       font-family: "Courier New", "sans-serif";
+     }
+
+     #game-area canvas {
+       margin: 0 auto;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>'Allo, 'Allo! </h1>
+      </div>
+      <div class="row">
+        <div id="game-area">
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/lib/requirejs/require.js"></script>
+    <script>
+     require(['scripts/app/common'], function() {
+       require(['app/main']);
+     });
+    </script>
+    
+  </body>
+</html>

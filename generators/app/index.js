@@ -45,22 +45,14 @@ var PhaserGenerator = yeoman.generators.Base.extend({
         this.copy('bowerrc', '.bowerrc');
         this.template('_package.json', 'package.json');
         this.copy('_bower.json', 'bower.json');
-        this.template('gulpfile.js');
+        this.template('_gulpfile.js', 'gulpfile.js');
     },
 
     generateClient: function() {
         this.sourceRoot(path.join(__dirname, 'templates'));
         
-        genUtils.processDirectory(this, 'app/client', 'app/client');
-
-        this.mkdir('app/client/scripts/views');
-        this.mkdir('app/client/vendor');
-
-        genUtils.processDirectory(this, 'app/views', 'app/views');
-
-        genUtils.processDirectory(this, 'config', 'config');
-
-        genUtils.processDirectory(this, 'tests', 'tests');
+        genUtils.processDirectory(this, 'app', 'app');
+        genUtils.processDirectory(this, 'build', 'build');
     },
     
     end: function() {

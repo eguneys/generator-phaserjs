@@ -1,0 +1,29 @@
+{
+  "name": "phaser-template",
+  "version": "0.0.0",
+  "authors": [
+    "eguneys <eguneys@hotmail.com>"
+  ],
+  "description": "Phaser template with requirejs and gulp",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "phaser",
+    "requirejs",
+    "gulp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.14",
+    "almond": "~0.3.0",
+    "phaser-official": "~2.0.7"
+  }
+}

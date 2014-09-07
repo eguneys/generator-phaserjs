@@ -54,6 +54,25 @@ describe('phaserjs generator', function () {
                         });
                     });
             });
+
+            it('should build standalone lib', function(done) {
+                this.timeout(48000);
+                console.log('requiejs build');
+                this.app.withPrompt(defaultOptions)
+                    .on('end', function() {
+                        exec('gulp', function(error, stdout, stderr) {
+                            if (error) { console.log('Error: ' + error); }
+                            expect(stdout).to.contain('Finished \'default\'');
+
+                            assert.file([
+                                'public/lib/common.js'
+                            ]);
+                            
+                            
+                            done();
+                        });
+                    });
+            });
         });
     });
 
