@@ -30,7 +30,9 @@ var PhaserJsStateGenerator = yeoman.generators.NamedBase.extend({
         var slugName = this._.slugify(this.name),
             className = this._.classify(this.name),
             appFile,
-            inAppText = "game.state.add('" + slugName + "', " + className + ");";
+            inAppText = "game.state.add('" + slugName + "', " + className + ");",
+            inAppDepText = "'states/" + slugName + "'";
+        
 
         try {
 
@@ -54,8 +56,19 @@ var PhaserJsStateGenerator = yeoman.generators.NamedBase.extend({
         
         appFile = appFile.replace(
                 /start\: function\(\) {([\s\S]+?)\n {8}\}/,
-            "$1\n            " + inAppText + "\n        \}");
+            "start: function() {$1\n            " + inAppText + "\n        \}");
 
+        appFile = appFile.replace(
+            /define\(\[([\s\S]+?)\]/,
+            "define([$1,\n        " + inAppDepText + "]");
+
+
+        var tenSpaces = "                                   ";
+        
+        appFile = appFile.replace(
+                /function\(Phaser\,\n([\S\s]+?)\n[\s]+\)/,
+            "function(Phaser,\n$1,\n" + tenSpaces + ' ' + className + "\n" + tenSpaces + ")");
+        
         this.writeFileFromString(appFile, 'app/scripts/app.js');
     },
 

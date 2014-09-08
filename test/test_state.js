@@ -54,7 +54,12 @@ describe('phaserjs:state generator', function () {
 
                         assert.fileContent('app/scripts/states/teststate.js', / function Teststate\(\) \{\}/);
 
-                        assert.fileContent('app/scripts/app.js', /\n {12}game\.state\.add\(\'teststate\'\, Teststate\)\;\n {8}\}/);
+                        assert.fileContent('app/scripts/app.js', /\n {12}game\.state\.add\(\'teststate\'\, Teststate\)\;\n/);
+
+                        assert.fileContent('app/scripts/app.js', /,\n {8}\'states\/teststate\'\]\, function\(Phaser\,\n/);
+
+                        assert.fileContent('app/scripts/app.js',
+                                           /,\n[\s]+Teststate\n/);
                         
                         done();
                     });
@@ -77,7 +82,13 @@ describe('phaserjs:state generator', function () {
                         assert.fileContent('app/scripts/states/teststate.js', / function Teststate\(\) \{\}/);
                         
                         assert.fileContent('app/scripts/app.js', /\n {12}game\.state\.add\(\'teststate\'\, Teststate\)\;\n {8}\}/);
-     
+
+                        assert.fileContent('app/scripts/app.js', /define\(\[[\s\S]+?,\n {8}\'states\/teststate\'\]\, function\(Phaser\,\n/);
+
+                        
+                        assert.fileContent('app/scripts/app.js',
+                                           /,\n[\s]+Teststate\n/);
+                        
                         done();
                     });
             });
