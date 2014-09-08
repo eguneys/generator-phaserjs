@@ -1,4 +1,4 @@
-# generator-phaserjs
+# generator-phaserjs | [![Build Status](https://travis-ci.org/eguneys/generator-phaserjs.svg)](https://travis-ci.org/eguneys/generator-phaserjs)
 
 > Yeoman generator for creating Phaser game applications, using Phaser, RequireJS and Gulp build tool - lets you quickly set up a project following best practices.
 

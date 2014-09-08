@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-phaserjs' ]; then cd .. && eval "mv $currentfolder generator-phaserjs" && cd generator-phaserjs; fi
+  - npm install -g bower
+  - cd test/fixtures
+  - npm install
+  - bower install
+  - cd ../../
