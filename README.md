@@ -44,11 +44,10 @@ Available generators:
 
 Sets up a new Phaser game app, generating all the boilerplate you need to get started.
 
-``bash
+```bash
 $ yo phaserjs
-```
 
-// TODO options
+```
 
 ### State
 
@@ -56,7 +55,7 @@ Generates a new state.
 
 ```bash
 $ yo phaserjs:state mystate
-// TODO
+   create app/scripts/states/mystate.js
 ```
 
 By default it will inject the state to `app.js` file.
@@ -71,7 +70,7 @@ Generates a new prefab.
 
 ```bash
 $ yo emberfs:prefab marble
-// TODO
+   create app/scripts/prefabs/marble.js
 ```
 
 By default it will generate a prefab extended from Phaser.Sprite.
