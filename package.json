@@ -1,6 +1,6 @@
 {
   "name": "generator-phaserjs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Yeoman generator for Phaser with RequireJS",
   "license": "MIT",
   "main": "app/index.js",
@@ -19,9 +19,9 @@
     "test-lite": "mocha --reporter spec -g 'phaserjs generator' -i"
   },
   "files": [
-      "generators",
-      "util.js",
-      "tets-util.js"
+    "generators",
+    "util.js",
+    "tets-util.js"
   ],
   "keywords": [
     "yeoman-generator",
