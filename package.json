@@ -19,7 +19,9 @@
     "test-lite": "mocha --reporter spec -g 'phaserjs generator' -i"
   },
   "files": [
-    "generators"
+      "generators",
+      "util.js",
+      "tets-util.js"
   ],
   "keywords": [
     "yeoman-generator",
